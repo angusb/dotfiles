@@ -47,4 +47,4 @@ get_branch ()
 }
 
 #PS1='${c_sgr0}\u@${c_red}\w${c_sgr0}[$(branch_color)$(parse_git_branch)${c_sgr0}]: '
-PS1='\u@\w$(get_branch)${c_sgr0}: '
+#PS1='\u@\w$(get_branch)${c_sgr0}: \'
