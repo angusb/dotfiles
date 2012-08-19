@@ -1,0 +1,13 @@
+[user]
+	name = Angus Burton
+	email = angusb@gmail.com
+[core]
+	editor = emacs
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit
+	ign = ls-files -o -i --exclude-standard
+[color]
+	ui = true
