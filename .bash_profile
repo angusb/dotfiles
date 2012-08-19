@@ -1,6 +1,7 @@
 alias ll='ls -l'
 alias gg='git grep'
 alias gc='git commit'
+alias e='emacs'
 
 c_cyan=`tput setaf 6`
 c_red=`tput setaf 1`
@@ -39,7 +40,8 @@ get_branch ()
 {
     if [ $(parse_git_branch) != '0' ];
     then
-	branch="${c_sgr0}[$(branch_color)$(parse_git_branch)${c_sgr0}]"
+	#branch="[$(branch_color)$(parse_git_branch)${c_sgr0}]"
+	branch="[$(branch_color)$(parse_git_branch)${c_sgr0}]"
     else
 	return 0
     fi
@@ -47,4 +49,5 @@ get_branch ()
 }
 
 #PS1='${c_sgr0}\u@${c_red}\w${c_sgr0}[$(branch_color)$(parse_git_branch)${c_sgr0}]: '
-#PS1='\u@\w$(get_branch)${c_sgr0}: \'
+#PS1='\u@\w\[$(get_branch)\]\[${c_sgr0}\]: '
+PS1='\u@\w\[$(get_branch)\]: '
