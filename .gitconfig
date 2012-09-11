@@ -11,3 +11,5 @@
 	ign = ls-files -o -i --exclude-standard
 [color]
 	ui = true
+[credential]
+	helper = osxkeycahin
