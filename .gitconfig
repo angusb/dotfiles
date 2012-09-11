@@ -12,4 +12,4 @@
 [color]
 	ui = true
 [credential]
-	helper = osxkeychain
+	helper = osxkeychai
