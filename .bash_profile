@@ -1,10 +1,16 @@
-alias ll='ls -l'
-alias gg='git grep'
-alias gc='git commit'
+alias g='git'
 alias e='emacs'
+alias ls='ls -G'
+alias ll='ls -l'
 
-# Borrowed from Mark Otto
-export PS1='\e[0:35m⌘\e[m \e[0:36m\w/\e[m \e[0:33m`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`\e[m'
+# Mac specific...
+source /usr/local/git/contrib/completion/git-completion.bash
+
+# GIT_PS1_SHOWDIRTYSTATE=true
+# GIT_PS1_SHOWSTASHSTATE=true
+# GIT_PS1_SHOWUNTRACKEDFILES=true
+
+PS1='⌘ \w$(__git_ps1 " (%s)") '
 
 export PATH=/Users/angusb/bin:$PATH
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar 
