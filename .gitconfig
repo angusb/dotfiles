@@ -3,12 +3,17 @@
 	email = angusb@gmail.com
 [core]
 	editor = emacs
+	autorlf = true
 [alias]
 	st = status
 	co = checkout
 	br = branch
 	cm = commit
+	cma = commit -a --amend -C HEAD
+	p = push
 	ign = ls-files -o -i --exclude-standard
+	rs = reset --soft HEAD^
+	rh = reset --hard HEAD^
 [color]
 	ui = true
 [credential]
