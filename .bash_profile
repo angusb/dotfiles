@@ -2,6 +2,11 @@ alias g='git'
 alias e='emacs'
 alias ls='ls -G'
 alias ll='ls -l'
+alias bkup=backup
+
+backup() {
+    cp $1{,.bak}
+}
 
 # Git > 1.8.1.3
 source /usr/local/git/contrib/completion/git-prompt.sh
